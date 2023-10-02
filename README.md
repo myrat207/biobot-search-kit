@@ -1,74 +1,58 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+# BioBot Kit Search
+This tool enables users to efficiently search for kits using an intuitive search bar, offering autocomplete results and detailed views of each kit.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features & Functionality
+**Autocomplete Suggestions:** As users type into the search bar, the application dynamically provides relevant kit suggestions, enhancing the user experience and speeding up the search process.  
+**Detailed Kit Views**: On selecting a specific kit from the suggestions, the user can view detailed information about the kit, including its label ID and shipping tracking code.  
+**Input Validation**: The search bar is optimized to accept only numeric values and hyphens, ensuring data integrity.  
+**Error Handling**: In case of invalid inputs or backend issues, users are promptly informed with appropriate error messages.  
 
-## Available Scripts
+## Getting Started with Create React App
+
+This project is based on Create React App for the frontend and utilizes a simple Express.js server for the backend.
+
+## Prerequisites
+Node.js
+npm
 
 In the project directory, you can run:
 
-### `npm start`
+### Installation
+1. Clone the repository:
+git clone https://github.com/myrat207/biobot-search-kit.git
+2. cd biobot-search-kit
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Install frontend dependencies:  
+In the root project folder run:  
+npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5. Navigate to the server directory and install backend dependencies:  
+cd server  
+npm install  
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Configuration
+Before running the application, you need to set up the required environment variables:
 
-### `npm run build`
+1. Create .env file in the root directory.
+2. Populate the .env file:
+REACT_APP_API_URL=http://localhost:4000
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Available Scripts
+In the project directory, you can run:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm start  
+It runs the app in development mode.  
+Open http://localhost:3000 to view the frontend in your browser.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To start the backend server, navigate to the server directory and run:  
+npm start  
+This starts the backend server on http://localhost:4000.  
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# biobot-search-kit
->>>>>>> 289fb91adc4e36ed2f47bf8b4d7e10b809b441e8
+### Todo List
+* Better error handling for scenarios like, network error, no result found etc ...
+* Apply Search enhancements like, highlighting search term in the resulsts.
+* Save search history, if a user needs to get same KIT details again without entering lengthy ID
+* Applying smooth transition for dropdown
+* Would be better to adopt consistent design systems lke material UI, Tailwind css
+* Provide light and dark modes.
